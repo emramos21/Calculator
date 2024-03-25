@@ -3,7 +3,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: black;
+    color: rgb(46, 1, 247);
+    font-size: larger;
     background-color: #e5e5f7;
     opacity: 0.8;
     background-size: 20px 20px;
@@ -37,7 +38,7 @@ body {
     border-radius: 18px;
 }
 .inner{
-    background-color: #fff;
+    background-color: white;
     width: 750px;
     display: flex;
     flex-direction: column;
