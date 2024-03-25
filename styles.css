@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(131.83deg, #FFFAFA 0%,     #FFF7F7 99.21%);
+    background-image: linear-gradient(131.83deg, #3b50e9 0%,     #2f32f5 99.21%);
     width: 800px;
     text-align: center;
     height: 300px;
@@ -32,7 +32,7 @@ body {
     bottom: -2px;
     left: -2px;
     right: -2px;
-    background-image: linear-gradient(312.25deg, #FFC4BC 0%,     rgba(255, 255, 255, 0) 66.19%);
+    background-image: linear-gradient(312.25deg, #343cdf 0%,     rgba(36, 36, 237, 0) 66.19%);
     z-index: -1;
     border-radius: 18px;
 }
@@ -43,7 +43,7 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 250px;
-    box-shadow: 0 40px 80px #FBE4E0;
+    box-shadow: 0 40px 80px #4f2df8;
     border-radius: 14px;
 }
 .footer{
