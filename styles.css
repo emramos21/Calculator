@@ -52,4 +52,20 @@ body {
     justify-content: space-between;
     width: 500px;
     align-items: center;
+   
+}
+.zero, .one, .two, .three, .four, .five, .six, .seven, .eight,
+.nine, .plus, .minus, .multiply, .divide, .equals, .dot, .clear{
+    font-size: 20px;
+    padding: 12px 28px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+.zero:hover, .one:hover, .two:hover, .three:hover, .four:hover, .five:hover, 
+.six:hover, .seven:hover, .eight:hover, .nine:hover, .plus:hover, .minus:hover,
+.multiply:hover, .divide:hover, .equals:hover, .dot:hover, .clear:hover{
+    background-color: grey;
+    color: white;
 }
