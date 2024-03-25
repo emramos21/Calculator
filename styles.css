@@ -48,11 +48,13 @@ body {
 }
 .footer{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 500px;
-    align-items: center;
-   
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:center;
+    margin-right: 200px;
+    height: 200px;
+    width: 100px;
 }
 .zero, .one, .two, .three, .four, .five, .six, .seven, .eight,
 .nine, .plus, .minus, .multiply, .divide, .equals, .dot, .clear{
