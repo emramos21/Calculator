@@ -1,11 +1,13 @@
-let firstNum = first button
-let secNum = 2nd button 
-let addNum = firstNum + secNum
-let subNum = firstNum - secNum
-let multiplyNum = firstNum * secNum
-let dividNum = firstNum / secNum
+const display = document.getElementById("display");
+function toScreen(input){
+    display.value += input;
+}
+function clearInterval(){
 
-function add(firstNum, secNum)
+}
+function calculate(){
+
+}
 
 
 
