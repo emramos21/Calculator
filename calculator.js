@@ -2,7 +2,7 @@ const display = document.getElementById("display");
 function toScreen(input){
     display.value += input;
 }
-function clearInterval(){
+function clear(){
 
 }
 function calculate(){

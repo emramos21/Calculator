@@ -10,34 +10,27 @@
     </head>
     <body>
         <script src="calculator.js"></script>
-        <h1>Let's do math!</h1>
-        <div class="header">
-            <div class="screen">
-                <div class="inner">
-                    <input id="display" readonly>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            
-            <button onclick="toScreen('+')"class="plus">+</button>
+            <div id="calculator">
+                <input id="display">
+            <div id="keys">
+            <button onclick="toScreen('+')" class="operator">+</button>
             <button onclick="toScreen('7')">7</button>
             <button onclick="toScreen('8')">8</button>
             <button onclick="toScreen('9')">9</button>
-            <button onclick="toScreen('-')">-</button>
+            <button onclick="toScreen('-')" class="operator">-</button>
             <button onclick="toScreen('4')">4</button>
             <button onclick="toScreen('5')">5</button>
             <button onclick="toScreen('6')">6</button>
-            <button onclick="toScreen('*')">*</button>
+            <button onclick="toScreen('*')" class="operator">*</button>
             <button onclick="toScreen('1')">1</button>
             <button onclick="toScreen('2')">2</button>
             <button onclick="toScreen('3')">3</button>
-            <button onclick="toScreen('/')">/</button>
+            <button onclick="toScreen('/')" class="operator">/</button>
             <button onclick="toScreen('0')">0</button>
             <button onclick="calculate()">=</button>
             <button onclick="toScreen('.')">.</button>
-            <button onclick="clear()">Clear</button>
-    </div>
+            <button onclick="clear()" class="operator">Clear</button>
+        </div>
+      </div>      
     </body>
 </html>

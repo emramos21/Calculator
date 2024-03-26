@@ -1,8 +1,9 @@
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
     color: rgb(46, 1, 247);
     font-size: larger;
     background-color: #e5e5f7;
@@ -10,56 +11,22 @@ body {
     background-size: 20px 20px;
     background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
 }
-.header{
-    box-sizing: border-box;
-    padding: 50px;
-    margin: 0;
-}
-.screen{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#calculator{
     background-image: linear-gradient(131.83deg, #3b50e9 0%,     #2f32f5 99.21%);
-    width: 800px;
-    text-align: center;
-    height: 300px;
     border-radius: 16px;
-    position: relative;
-    color: black;
-}
-.screen::before{
-    position: absolute;
-    content: "";
-    top: -2px;
-    bottom: -2px;
-    left: -2px;
-    right: -2px;
-    background-image: linear-gradient(312.25deg, #343cdf 0%,     rgba(36, 36, 237, 0) 66.19%);
-    z-index: -1;
-    border-radius: 18px;
-}
-.inner{
-    background-color: white;
-    width: 750px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 250px;
-    box-shadow: 0 40px 80px #4f2df8;
-    border-radius: 14px;
-   
+    width: 800px;
+    height: 900px;
 }
 #display{
-    height: 150px;
+    height: 350px;
+    box-shadow: 0 40px 80px #4f2df8;
     width: 600px;
     padding: 20px;
-    font-size: larger;
-    text-align: center;
-    border: none;
-    background-color: white;
-    color: black;
+    border: solid black;
+    border-radius: 15px 50px;
+    margin: 50px;
 }
-.footer{
+#keys{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -67,11 +34,12 @@ body {
 }
 button{
     font-size: 20px;
-    padding: 12px 28px;
+    padding: 10px 24px;
     transition-duration: 0.4s;
     border-radius: 8px;
     background-color: black;
     color: white;
+    margin: 10px;
 }
 button:hover{
     background-color: grey;
