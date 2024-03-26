@@ -2,8 +2,8 @@ const display = document.getElementById("display");
 function appendToScreen(input){
     display.value += input;
 }
-function clear(){
-
+function clearScreen(){
+    display.value = "";
 }
 function calculate(){
 
