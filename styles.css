@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     color: rgb(46, 1, 247);
     font-size: larger;
@@ -17,23 +18,27 @@ body {
     width: 800px;
     height: 900px;
 }
-#display{
-    height: 350px;
+#screen{
+    height: 75px;
     box-shadow: 0 40px 80px #4f2df8;
-    width: 600px;
-    padding: 20px;
+    width: 400px;
     border: solid black;
     border-radius: 15px 50px;
     margin: 50px;
-    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+ 
 }
 #keys{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 25px;
+    margin: 50px;
+    
 }
-button{
+.number, .operator, .equal, .dot, .clear{
     font-size: 20px;
     padding: 10px 24px;
     transition-duration: 0.4s;
@@ -42,7 +47,7 @@ button{
     color: white;
     margin: 10px;
 }
-button:hover{
+.number:hover, .operator:hover, .equal:hover, .dot:hover, .clear:hover{
     background-color: grey;
     color: white;
 }
