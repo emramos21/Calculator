@@ -3,7 +3,7 @@ let perviousValue = '';
 let currentValue = '';
 document.addEventListener("DOMContentLoaded", function(){
     //this stores all HTML components into JS
-    let clear = document.querySelector("clear");
+    let clear = document.querySelector("#clear");
     let equal = document.querySelector("equal");
     let decimal = document.querySelector("dot");
     let numbers = document.querySelectorAll(".number");
@@ -45,22 +45,36 @@ document.addEventListener("DOMContentLoaded", function(){
         //this is because the numbers are coming before the operator
         //with the operator we need to keep the previous number and add to it
         currentScreen.textContent = currentValue;
-        //we are updating our global variable for when we need it in other functions
+        //we are updating our global variable
     }));
+
+    clear.addEventListener("click", function(){
+        perviousValue = '';
+        currentValue = '';
+        operator = '';
+        previousScreen.textContent = currentValue;
+        currentScreen.textContent = currentValue;
+    })
 });
 
 function handleNumber(num){
     //this is printing the buttons to the screen by using the 
     //previous values from the earlier function
     //and the if statement is limiting the amount of numbers entered to 5
+    //notice how we have a new parameter but the name is related to the information we are
+    //working with
     if (currentValue.length <= 5){
         currentValue += num;
         //we are updating our global variable for when we need it in other functions
     }
 }
-
 function handleOperator(op){
+    //notice how we have a new parameter but the name is related to the information we are
+    //working with
     operator = op;
+    //assigning the HTML DOM element to our global variable
     perviousValue = currentValue;
     currentValue = '';
+    //making the current value string empty so we can get the next number to complete the
+    //operator command
 }
