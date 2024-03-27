@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //this stores all HTML components into JS
     let clear = document.querySelector("#clear");
     let equal = document.querySelector(".equal");
-    let decimal = document.querySelector(".dot");
+    let decimal = document.querySelector(".decimal");
     let numbers = document.querySelectorAll(".number");
     let operators = document.querySelectorAll(".operator");
     let previousScreen = document.querySelector(".previous");
@@ -57,7 +57,20 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
     equal.addEventListener("click", function(){
-        calculate()
+        if(currentValue != '' && perviousValue != ''){
+            //before this if statement when the user pressed the equals button and the screen 
+            //was empty, the screen would display "NaN" because the computer did not understand
+            //now after this if statement if the user presses the equal button nothing will
+            //happen
+            calculate();
+            previousScreen.textContent = '';
+            currentScreen.textContent = perviousValue;
+            //this is allowing the screen to be refressed with the operators answer
+        }
+    })
+
+    decimal.addEventListener("click", function(){
+        addDecimal();
     })
 });
 
@@ -99,9 +112,18 @@ function calculate(){
         perviousValue /= currentValue;
     }
     perviousValue = roundNumber(perviousValue);
-    console.log(perviousValue);
+    //this is using the round number function to trim the operator answer 
+    perviousValue = perviousValue.toString();
+    currentValue = currentValue.toString();
+    //these two functions and returning our numbers back into strings
 }
 
 function roundNumber(num){
     return Math.round(num * 1000) / 1000;
+}
+
+function addDecimal(){
+    if(!currentValue.includes(".")){
+        currentValue += '.';
+    }
 }
