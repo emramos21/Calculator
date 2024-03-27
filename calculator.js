@@ -4,8 +4,8 @@ let currentValue = '';
 document.addEventListener("DOMContentLoaded", function(){
     //this stores all HTML components into JS
     let clear = document.querySelector("#clear");
-    let equal = document.querySelector("equal");
-    let decimal = document.querySelector("dot");
+    let equal = document.querySelector(".equal");
+    let decimal = document.querySelector(".dot");
     let numbers = document.querySelectorAll(".number");
     let operators = document.querySelectorAll(".operator");
     let previousScreen = document.querySelector(".previous");
@@ -55,6 +55,10 @@ document.addEventListener("DOMContentLoaded", function(){
         previousScreen.textContent = currentValue;
         currentScreen.textContent = currentValue;
     })
+
+    equal.addEventListener("click", function(){
+        calculate()
+    })
 });
 
 function handleNumber(num){
@@ -77,4 +81,27 @@ function handleOperator(op){
     currentValue = '';
     //making the current value string empty so we can get the next number to complete the
     //operator command
+}
+
+function calculate(){
+    //this first line of code is changing the string previousScreen into a JS number
+    //notice how this "number" function is capitalized
+    previousScreen = Number(perviousValue)
+    currentValue = Number(currentValue)
+
+    if(operator === "+"){
+        perviousValue += currentValue;
+    } else if(operator === "-"){
+        perviousValue -= currentValue;
+    } else if(operator === "*"){
+        perviousValue *= currentValue;
+    } else {
+        perviousValue /= currentValue;
+    }
+    perviousValue = roundNumber(perviousValue);
+    console.log(perviousValue);
+}
+
+function roundNumber(num){
+    return Math.round(num * 1000) / 1000;
 }
